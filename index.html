@@ -415,7 +415,7 @@ body{
 This little playlist is just a tiny way of saying I'm really, really grateful I get to have you.
       </p>
 
-      <div class="big-play" onclick="togglePlay()"></div>
+      <div class="big-play" onclick="togglePlay()">▶</div>
     </div>
   </div>
 
@@ -464,9 +464,9 @@ This little playlist is just a tiny way of saying I'm really, really grateful I 
     <img id="viewer-img">
 
     <div class="viewer-actions">
-      <button onclick="toggleLike(this)"></button>
-<button onclick="showNote()"></button>
-<button onclick="closeImage()"></button>
+      <button onclick="toggleLike(this)">💚</button>
+<button onclick="showNote()">💬</button>
+<button onclick="closeImage()">✖️</button>
     </div>
 
     <div class="note" id="note">
@@ -476,7 +476,7 @@ This little playlist is just a tiny way of saying I'm really, really grateful I 
 </div>
 
 <div class="surprise" onclick="openSurprise()">
-  tap for something special 
+  tap for something special 👀
 </div>
 
 <div class="popup" id="popup">
@@ -492,17 +492,17 @@ This little playlist is just a tiny way of saying I'm really, really grateful I 
   <h3>Moments That Are Stuck In My Head</h3>
 
   <div class="timeline-item">
-    <span></span>
+    </span>📅</span>
     <p>The day we started talking.. I didn't expect you'd mean this much.</p>
   </div>
 
   <div class="timeline-item">
-    <span></span>
+    </span>🎧</span>
     <p>That first late night call I never wanted to end.</p>
   </div>
 
   <div class="timeline-item">
-    <span></span>
+    </span>💬</span>
     <p>The first "I miss you" that made my heart melt.</p>
   </div>
 </div>
@@ -671,10 +671,10 @@ function openImage(img){
 
   if(likedPhotos[currentPhoto]){
   likeButton.classList.add("liked");
-  likeButton.textContent = "";
+  likeButton.textContent = "💚";
 } else {
   likeButton.classList.remove("liked");
-  likeButton.textContent = "";
+  likeButton.textContent = "🤍";
 }
 }
 
@@ -686,11 +686,11 @@ function toggleLike(button){
   button.classList.toggle("liked");
 
   if(button.classList.contains("liked")){
-    button.textContent = "";
+    button.textContent = "💚";
     likedPhotos[currentPhoto] = true;
     createHeart();
   } else {
-    button.textContent = "";
+    button.textContent = "🤍";
     delete likedPhotos[currentPhoto];
   }
 
@@ -721,7 +721,7 @@ function createHeart(){
 
     const heart = document.createElement("div");
     heart.classList.add("floating-heart");
-    heart.textContent = "";
+    heart.textContent = "💚";
 
     heart.style.left = centerX + "px";
     heart.style.top = centerY + "px";
